@@ -1,6 +1,7 @@
-@import "tailwindcss";
+/* // @import "tailwindcss"; */
 
-:root {
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +24,55 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+button {
+  border: 1px solid;
 }
+
+
+
+:root {
+  --font-open_sans: 'Open Sans', sans-serif;
+  --font-railway: 'Raleway', sans-serif;
+}
+
+/* styles/globals.css */
+ body {
+  font-family: var(--font-open_sans);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-railway);
+}
+
+/* h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+h3 {
+  color: #007c7a;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+}
+ */
+
+.nav-links a:hover { 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 16;
+}
+

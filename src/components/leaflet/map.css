@@ -1,0 +1,17 @@
+.open-drawer-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0565f;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+   .open-drawer-btn:hover {
+    background-color: #0056b3;
+  }

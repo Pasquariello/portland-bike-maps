@@ -1,0 +1,61 @@
+/* components/SlidingDrawer.css */
+
+.drawer {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 60%;
+    overflow-y: auto;
+    transition: bottom 0.3s ease;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1100;
+  }
+  
+  .drawer.open {
+    bottom: 0;
+  }
+  
+  .drawer-content {
+    padding: 1rem;
+  }
+  
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+
+
+  .close-content {
+    position: absolute; /* Positioning relative to the drawer */
+    top: 20px;
+    right: 20px; /* Align to the right */
+    background: #f4f4fe;
+    border-radius: 45;
+    padding: 16;
+    align-self: flex-end;
+  }
+  
+  .close-content:hover {
+    background: #eae8e9; /* Darker red on hover */
+  }
+  
+  
