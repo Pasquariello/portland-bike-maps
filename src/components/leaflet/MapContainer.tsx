@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
+import { MapProps } from './types';
 
 export default function LeafMapContainer() {
 
@@ -16,8 +17,8 @@ const Map = useMemo(() => dynamic(
 ), [])
 
 
-  const [geojsonData, setGeojsonData] = useState({});
-  const [geojsonDataOrig, setGeojsonDataOrig] = useState(null);
+  const [geojsonData, setGeojsonData] = useState<MapProps>();
+  const [geojsonDataOrig, setGeojsonDataOrig] = useState<MapProps>();
 
   const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 

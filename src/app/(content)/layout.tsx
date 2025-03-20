@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Head from "next/head";
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { open_sans } from '@/ui/fonts';
-import Footer from "@/components/footer";
-import Link from "next/link";
 import NavItems from "@/components/nav/navItems";
 
 

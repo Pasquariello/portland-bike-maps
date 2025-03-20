@@ -1,4 +1,3 @@
-import { open_sans, raleway } from '@/ui/fonts';
 import './blog.css';
 
 const BlogPage = () => {
