@@ -31,7 +31,7 @@ const PopupContent = ({status, facilityType, segmentName, yearBuilt}: PopupConte
           
           <p><strong>Type:</strong> {facilityType}</p>
           <p><strong>Status:</strong> {status}</p>
-          {yearBuilt && <p><strong>Year</strong> Built: {yearBuilt}</p>}
+          {yearBuilt && <p><strong>Year Built:</strong> {yearBuilt}</p>}
 
           <p><strong>Description:</strong></p>
           <p>{fullDescripion[facilityType]}</p>
