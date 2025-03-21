@@ -20,7 +20,7 @@ export default function Home() {
         <h3 style={{ color: '#FFF', fontWeight: 400, fontSize: 22}}>Pedal Power: Cruisin' Through Portland, One Bike Lane at a Time!</h3>
 
         <p style={{color: '#Eae8e9'}}>
-          There's no better way to experience Portland's unique vibe than by cruising down its miles of bike lanes. From the bustling streets downtown to the peaceful paths along the river, every ride is an opportunity to soak in the city's sights and sounds. Whether you're a seasoned cyclist or just looking for a leisurely ride, Portland's bike lanes make it easy to explore at your own pace.
+          There&apos;s no better way to experience Portland&apos;s unique vibe than by cruising down its miles of bike lanes. From the bustling streets downtown to the peaceful paths along the river, every ride is an opportunity to soak in the city&apos;s sights and sounds. Whether you&apos;re a seasoned cyclist or just looking for a leisurely ride, Portland&apos;s bike lanes make it easy to explore at your own pace.
         </p>
         </div>
       </div>
