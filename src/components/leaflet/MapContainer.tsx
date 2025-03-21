@@ -6,11 +6,6 @@ import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
 
-interface MyGeoJSON extends GeoJSON.GeoJsonObject {
-  type: 'FeatureCollection';
-  features: Array<GeoJSON.Feature>;
-}
-
 export default function LeafMapContainer() {
 
 const Map = useMemo(() => dynamic(
@@ -122,7 +117,6 @@ const Map = useMemo(() => dynamic(
                 key={filter.title} 
                 onClick={() => handleOnClick(filter.value)}
                 className={`${open_sans.className}`} style={{
-                  //  border: activeClassFilter[filter.value] ? '2px solid black': '2px solid transparent',
                    border: activeClassFilter.includes(filter.value) ? '2px solid black': '2px solid transparent',  
   
                    cursor: 'pointer', padding: '16px 32px', color: 'white', background: filter.color, display: 'inline-block', borderRadius: 44}}
