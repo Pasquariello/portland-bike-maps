@@ -21,7 +21,7 @@ export default function RootLayout({
        <Head>
   
           <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.css' />
-          <script src='https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.js'></script>
+          <script src='https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.js' defer></script>
       </Head>
       <body
         className={`${open_sans.variable} ${raleway.variable}`}
