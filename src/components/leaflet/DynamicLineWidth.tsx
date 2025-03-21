@@ -9,10 +9,26 @@ import { FacilityProperties, GeoJson, PopupContentProps } from "./types";
 
 
 const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) => {
+
+  const fullDescripion: {[key: string]: string} = {
+    ABL: 'Advisory Bike Lane',
+    BBBL: 'Bike Lane Buffered by Bus Lane',
+    BL: 'Bike Lane',
+    BBL: 'Buffered Bike Lane',
+    ESR: 'Enhanced Shared Roadway',
+    LSB: 'Local Service Bikeway',
+    NG: 'Neighborhood Greenway',
+    PBL: 'Protected Bike Lane',
+    SBBL: 'Shared Bus-Bike Lane',
+    SIR: 'Separated in-roadway',
+    TRL: 'Off-Street Path/Trail',
+  }
+
+
   return (
       <div>
           <h3>Name: {segmentName}</h3>
-          <p>Type: {facilityType}</p>
+          <p>Type: {fullDescripion[facilityType]}</p>
           <p>Status: {status}</p>
       </div>
   )
@@ -28,6 +44,7 @@ const DynamicLineWidth = ({geojsonData}: GeoJson) => {
       const handleZoom = () => {
         setZoomLevel(map.getZoom());
       };
+
   
       // Listen for zoom level changes
       map.on('zoomend', handleZoom);

@@ -15,7 +15,7 @@ const NavItems = () => {
             link: '/',
         },
         {
-            title: 'Blog Page',
+            title: 'Skill Assessment Notes',
             link: '/blog',
         },
         {

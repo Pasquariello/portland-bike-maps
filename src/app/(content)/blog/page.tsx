@@ -8,7 +8,7 @@ const BlogPage = () => {
       </header>
 
       <section className="blog-content">
-        <h2>Challenges</h2>
+        {/* <h2>Challenges</h2>
 
         <p>
           Working on this challenge presented a few unique obstacles that I genuinely enjoyed tackling. I hadn&apos;t used Leaflet in years, nor had I worked with MapLibre or ArcGIS before. That said, I was excited for the opportunity to learn more about these technologies.
@@ -25,7 +25,7 @@ const BlogPage = () => {
         </p>
         <p>
           One more feature I loved about Leaflet was the abundance of resources available for customizing the map&apos;s layers and themes. With that, I was able to finish the project and create a solution I was proud of.
-        </p>
+        </p> */}
 
         <h2>Approach</h2>
         <p>

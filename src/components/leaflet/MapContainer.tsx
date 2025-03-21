@@ -33,10 +33,16 @@ const Map = useMemo(() => dynamic(
       .catch((error) => console.error('Error loading GeoJSON:', error));
   }, []);
 
+  // const CLASS_ONE = '#8BC34A';
+  // const CLASS_TWO = '#FF9800';
+  // const CLASS_THREE = '#4A90E2';
+  // const CLASS_FOUR = '#D32F2F';
+
   const CLASS_ONE = '#8BC34A';
   const CLASS_TWO = '#FF9800';
   const CLASS_THREE = '#4A90E2';
   const CLASS_FOUR = '#D32F2F';
+  
 
   const filters = [
     {
@@ -109,7 +115,7 @@ const Map = useMemo(() => dynamic(
   return (
     <div>
       <p className={`${open_sans.className}`} style={{fontSize: 16}}>Filter by type (select one or more):</p>
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      {/* <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
         <div style={{display: 'flex', gap: 20, marginBottom: 20}}>
           {filters.map(filter => {
             return (
@@ -119,7 +125,7 @@ const Map = useMemo(() => dynamic(
                 className={`${open_sans.className}`} style={{
                    border: activeClassFilter.includes(filter.value) ? '2px solid black': '2px solid transparent',  
   
-                   cursor: 'pointer', padding: '16px 32px', color: 'white', background: filter.color, display: 'inline-block', borderRadius: 44}}
+                   cursor: 'pointer', padding: '8px 24px', color: 'white', background: filter.color, display: 'inline-block', borderRadius: 44}}
               >
                 {filter.title}
               </div>
@@ -137,7 +143,7 @@ const Map = useMemo(() => dynamic(
         >
           Reset
         </p>
-      </div>
+      </div> */}
       {geojsonData && (
 
         <Map geojsonData={geojsonData}>

@@ -1,34 +1,28 @@
 'use client'
 // components/Map.js
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 import DynamicLineWidth from './DynamicLineWidth';
 import { MapProps } from './types';
-
 import './map.css'; // Import the CSS for the drawer
 
   
 const Map = ({ geojsonData, children }: MapProps) => {
   return (
     <MapContainer center={[45.53514, -122.6355]} zoom={12} style={{ height: '800px' }}>
-        {/* <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" /> */}
-        {/* <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" /> */}
-                {/* <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
-                <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
-
-
-                
-
-        {/* https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png */}
-      {/* {geojsonData && <GeoJSON key={JSON.stringify(geojsonData)} data={geojsonData} onEachFeature={onEachFacility} />} */}
+      <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
       <DynamicLineWidth  key={JSON.stringify(geojsonData)} geojsonData={geojsonData} />
+      <Marker position={[45.5155342,-122.6753466]}>
+        <Popup>
+          Hi, Alta! &#128075;
+        </Popup>
+      </Marker>
       {children}
     </MapContainer>
   );
 };
 
-// 45°31'08.9"N 122°38'07.8"W
 export default Map;
