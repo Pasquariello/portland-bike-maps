@@ -1,5 +1,6 @@
 // src/types.ts
 import { Feature, Geometry, FeatureCollection } from "geojson";
+import { extend } from "leaflet";
 
 
 export interface FacilityProperties {
@@ -18,7 +19,11 @@ export interface PopupContentProps {
   facilityType: string;
   segmentName: string
 }
-export interface MapProps {
-  geojsonData: FeatureCollection<Geometry, FacilityProperties>;
+export interface MapProps  extends GeoJson{
+  children: React.ReactNode
 }
   
+export interface GeoJson {
+  geojsonData: FeatureCollection<Geometry, FacilityProperties>;
+}
+

@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
-import { MapProps } from './types';
+import { FacilityProperties, GeoJson, MapProps } from './types';
+import { FeatureCollection, Geometry } from 'geojson';
 
 export default function LeafMapContainer() {
 
@@ -17,8 +18,8 @@ const Map = useMemo(() => dynamic(
 ), [])
 
 
-  const [geojsonData, setGeojsonData] = useState<MapProps>();
-  const [geojsonDataOrig, setGeojsonDataOrig] = useState<MapProps>();
+  const [geojsonData, setGeojsonData] = useState<any>();
+  const [geojsonDataOrig, setGeojsonDataOrig] = useState<any>();
 
   const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 
@@ -71,14 +72,6 @@ const Map = useMemo(() => dynamic(
   
     setActiveClassFilter(newArray);
 
-    
-  //   const options2 = {
-  //     CLASS_ONE: ['NG', 'TRL' ],
-  //     CLASS_TWO: ['ABL', 'BBBL', 'BL', 'BBL', 'SBBL' ],
-  //     CLASS_THREE: ['ESR', 'LSB'],
-  //     CLASS_FOUR: ['PBL', 'SIR']
-  // }
-
     const options = {
       ABL: 'CLASS_TWO', // Class 2
       BBBL: 'CLASS_TWO', // Class 2
@@ -93,7 +86,7 @@ const Map = useMemo(() => dynamic(
       TRL: 'CLASS_ONE', // Class 1
   }
 
-    const filteredData = geojsonDataOrig?.features?.filter(data => newArray.includes(options[data.properties.Facility]));
+    const filteredData = geojsonDataOrig?.features?.filter((data: { properties: { Facility: string; }; }) => newArray.includes(options[data.properties.Facility as keyof typeof options]));
 
     if (!newArray.length) { 
       setGeojsonData(geojsonDataOrig)

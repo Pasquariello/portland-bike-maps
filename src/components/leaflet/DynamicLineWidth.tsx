@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useMap, GeoJSON} from "react-leaflet";
 import { GeoJSON as LeafletGeoJSON } from 'leaflet'; // Leaflet types
 import ReactDOMServer from 'react-dom/server';
-import { FacilityProperties, MapProps, PopupContentProps } from "./types";
+import { FacilityProperties, GeoJson, MapProps, PopupContentProps } from "./types";
 
 
 const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) => {
@@ -20,7 +20,7 @@ const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) =>
 
 
 // Component to update line width based on zoom
-const DynamicLineWidth = ({geojsonData}: MapProps) => {
+const DynamicLineWidth = ({geojsonData}: GeoJson) => {
     const [zoomLevel, setZoomLevel] = useState<number>(0);
     const map = useMap();
   
