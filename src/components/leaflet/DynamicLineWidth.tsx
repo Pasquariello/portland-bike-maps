@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useMap, GeoJSON} from "react-leaflet";
 import { GeoJSON as LeafletGeoJSON } from 'leaflet'; // Leaflet types
 import ReactDOMServer from 'react-dom/server';
-import { FacilityProperties, GeoJson, MapProps, PopupContentProps } from "./types";
+import { FacilityProperties, GeoJson, PopupContentProps } from "./types";
 
 
 const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) => {

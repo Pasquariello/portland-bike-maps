@@ -9,8 +9,6 @@ import DynamicLineWidth from './DynamicLineWidth';
 import { MapProps } from './types';
 
 import './map.css'; // Import the CSS for the drawer
-import { useState } from 'react';
-import SlidingDrawer from '../slidingDrawer/slidingDrawer';
 
   
 const Map = ({ geojsonData, children }: MapProps) => {

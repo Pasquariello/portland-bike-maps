@@ -4,8 +4,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
-import { FacilityProperties, GeoJson, MapProps } from './types';
-import { FeatureCollection, Geometry } from 'geojson';
 
 export default function LeafMapContainer() {
 

@@ -1,6 +1,5 @@
 // src/types.ts
-import { Feature, Geometry, FeatureCollection } from "geojson";
-import { extend } from "leaflet";
+import { Geometry, FeatureCollection } from "geojson";
 
 
 export interface FacilityProperties {
