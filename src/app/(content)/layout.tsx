@@ -16,20 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        {/* Start NavBar */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          paddingRight: 20,
-          paddingTop: 20,
-          paddingBottom: 20,
-          background: '#009F9D'
-        }}>
-         <NavItems />
+        
+         <NavItems  backgroundColor="#009F9D"/>
 
-        </div>
-        {/* End NavBar */}
-        {/* <div style={{paddingLeft: 40, paddingRight: 40}}> */}
+
           {children}
     </>
   );

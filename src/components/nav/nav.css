@@ -1,0 +1,83 @@
+/* General nav styles */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* The hamburger icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
+  
+  /* The navigation links */
+  .nav-links {
+    display: flex;
+    gap: 80px;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.3s ease, width 0.3s ease;
+  }
+  
+  /* Styling for the navigation links on hover */
+  .nav-links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .label {
+    font-size: 16px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      z-index: 1300;
+    }
+  
+    /* Hide the nav links by default on mobile */
+    .nav-links {
+      width: 0;
+      overflow: hidden;
+      position: fixed;
+      display: flex;
+      gap: 80px;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      text-align: center;
+      font-size: 40px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #303244; 
+      transform: translateX(-100%); /* Off-screen by default */
+      z-index: 1200;
+      overflow-y: hidden;
+    }
+  
+    .nav-links.open {
+      width: 100%;
+      transform: translateX(0); /* Slide the menu into view */
+    }
+  }
+  
+  

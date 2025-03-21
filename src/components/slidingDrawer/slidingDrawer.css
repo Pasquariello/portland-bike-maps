@@ -43,9 +43,9 @@
 
 
   .close-content {
-    position: absolute; /* Positioning relative to the drawer */
+    position: absolute; 
     top: 20px;
-    right: 20px; /* Align to the right */
+    right: 20px;
     background: #f4f4fe;
     border-radius: 45;
     padding: 16;
@@ -53,7 +53,7 @@
   }
   
   .close-content:hover {
-    background: #eae8e9; /* Darker red on hover */
+    background: #eae8e9;
   }
   
   

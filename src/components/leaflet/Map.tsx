@@ -1,5 +1,4 @@
 'use client'
-// components/Map.js
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import "leaflet/dist/leaflet.css"
@@ -17,7 +16,7 @@ const Map = ({ geojsonData, children }: MapProps) => {
       <DynamicLineWidth  key={JSON.stringify(geojsonData)} geojsonData={geojsonData} />
       <Marker position={[45.5155342,-122.6753466]}>
         <Popup>
-          Hi, Alta! &#128075;
+          <p style={{fontSize: 16}}>Hi, Alta! &#128075;</p>
         </Popup>
       </Marker>
       {children}
