@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import 'maplibre-gl/dist/maplibre-gl.css';
 import NavItems from "@/components/nav/navItems";
 
 export const metadata: Metadata = {
@@ -15,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-     
-        <NavItems backgroundColor="#424963" />
-
-
+      <NavItems backgroundColor="#424963" />
       {children}
     </>
   );

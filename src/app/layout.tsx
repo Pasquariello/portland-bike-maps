@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Head from "next/head";
-import 'maplibre-gl/dist/maplibre-gl.css';
 import { open_sans, raleway } from '@/ui/fonts';
 import Footer from "@/components/footer";
 
