@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { useEffect, useMemo, useState } from 'react';
 // import Map from './Map';
@@ -22,7 +23,7 @@ const Map = useMemo(() => dynamic(
 
 
   const [geojsonData, setGeojsonData] = useState<any>();
-  const [geojsonDataOrig, setGeojsonDataOrig] = useState<MyGeoJSON | null>();
+  const [geojsonDataOrig, setGeojsonDataOrig] = useState<any>();
 
   const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 
@@ -89,7 +90,7 @@ const Map = useMemo(() => dynamic(
     }
  
 
-    const filteredData = geojsonDataOrig?.features?.filter(data => newArray.includes(options[data?.properties?.Facility as keyof typeof options]));
+    const filteredData = geojsonDataOrig?.features?.filter((data: { properties: { Facility: string; }; }) => newArray.includes(options[data?.properties?.Facility as keyof typeof options]));
 
     if (!newArray.length) { 
       setGeojsonData(geojsonDataOrig)

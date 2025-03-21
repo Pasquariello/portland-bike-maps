@@ -1,6 +1,6 @@
 // src/types.ts
-import { Geometry, FeatureCollection } from "geojson";
 
+import { FeatureCollection, Geometry } from "geojson";
 
 export interface FacilityProperties {
   SegmentName: string;
@@ -18,11 +18,11 @@ export interface PopupContentProps {
   facilityType: string;
   segmentName: string
 }
+
+export interface GeoJson {
+ geojsonData: FeatureCollection<Geometry, FacilityProperties>;
+}
 export interface MapProps  extends GeoJson{
   children: React.ReactNode
 }
   
-export interface GeoJson {
-  geojsonData: Object;
-}
-
