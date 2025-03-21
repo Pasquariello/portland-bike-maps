@@ -9,7 +9,7 @@ import { FacilityProperties, GeoJson, PopupContentProps } from "./types";
 import { CLASS_FOUR, CLASS_ONE, CLASS_THREE, CLASS_TWO } from "@/constants";
 
 
-const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) => {
+const PopupContent = ({status, facilityType, segmentName, yearBuilt}: PopupContentProps) => {
 
   const fullDescripion: {[key: string]: string} = {
     ABL: 'Advisory Bike Lane',
@@ -25,12 +25,18 @@ const PopupContent = ({status, facilityType, segmentName}: PopupContentProps) =>
     TRL: 'Off-Street Path/Trail',
   }
 
-
   return (
       <div>
           <h3>Name: {segmentName}</h3>
-          <p>Type: {fullDescripion[facilityType]}</p>
-          <p>Status: {status}</p>
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            <p>Type: {facilityType}</p>
+            <p>Status: {status}</p>
+            {yearBuilt && <p>Year Built: {yearBuilt}</p>}
+          </div>
+
+          <p>Description: {fullDescripion[facilityType]}</p>
+
+
       </div>
   )
 }
@@ -56,9 +62,9 @@ const DynamicLineWidth = ({geojsonData}: GeoJson) => {
 
 
   const onEachFacility = (facility: Feature<Geometry, FacilityProperties>, layer: LeafletGeoJSON) => {
-   
+   console.log(' facility.properties',  facility.properties);
     const facilityType = facility.properties.Facility;
-    const { Status, SegmentName } = facility.properties;
+    const { Status, SegmentName, YearBuilt} = facility.properties;
     const color = getFacilityColor(facilityType);
 
     layer.setStyle({
@@ -67,7 +73,7 @@ const DynamicLineWidth = ({geojsonData}: GeoJson) => {
     });
 
     const popupContent = ReactDOMServer.renderToString(
-        <PopupContent status={Status} segmentName={SegmentName} facilityType={facilityType} />
+        <PopupContent status={Status} segmentName={SegmentName} facilityType={facilityType} yearBuilt={YearBuilt} />
       );
 
     layer.bindPopup(popupContent)

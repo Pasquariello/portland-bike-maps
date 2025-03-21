@@ -6,6 +6,7 @@ export interface FacilityProperties {
   SegmentName: string;
   Facility: string;
   Status: string;
+  YearBuilt: number;
 }
 
 export interface Facility {
@@ -16,7 +17,8 @@ export interface Facility {
 export interface PopupContentProps {
   status: string;
   facilityType: string;
-  segmentName: string
+  segmentName: string;
+  yearBuilt: number
 }
 
 export interface GeoJson {

@@ -13,7 +13,7 @@ const navItems = [
     },
     {
         title: 'Skills Assessment Notes',
-        link: '/blog',
+        link: '/notes',
     },
     {
         title: 'PBOT Info',

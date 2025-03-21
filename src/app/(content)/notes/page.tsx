@@ -1,13 +1,13 @@
-import './blog.css';
+import './notes.css';
 
-const BlogPage = () => {
+const NotesPage = () => {
   return (
-    <div className="blog-container">
-      <header className="blog-header">
+    <div className="note-container">
+      <header className="note-header">
         <h1>Exploring Map Technologies: A Journey with MapLibre and Leaflet</h1>
       </header>
 
-      <section className="blog-content">
+      <section className="note-content">
         <h2>Approach</h2>
         <p>
           As this project was aimed at presenting information about bike facilities in Portland, I wanted to ensure SEO was a key consideration. For this, I chose Next.js, as it&apos;s known for its excellent SEO capabilities. I built this site with mobile views in mind making sure all pages are mobile responsive, including the navigation elements. While I have experience with Vue, my more extensive background in React made using NextJS the best fit for me. My ability to quickly pick up new technologies served me well throughout the process, and it was a great opportunity to further hone my skills. The tech industry is ever-evolving, so I always embrace the mindset of continuous learning.
@@ -34,4 +34,4 @@ const BlogPage = () => {
   );
 }
 
-export default BlogPage;
+export default NotesPage;
