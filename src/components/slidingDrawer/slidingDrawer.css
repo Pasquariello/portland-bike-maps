@@ -46,10 +46,9 @@
     position: absolute; 
     top: 20px;
     right: 20px;
-    background: #f4f4fe;
-    border-radius: 45;
-    padding: 16;
     align-self: flex-end;
+    border: none;
+    background: transparent
   }
   
   .close-content:hover {
