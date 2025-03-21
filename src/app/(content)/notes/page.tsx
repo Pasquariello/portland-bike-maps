@@ -27,7 +27,7 @@ const NotesPage = () => {
 
         <h2>Final Thoughts</h2>
         <p>
-          Overall, this challenge was a rewarding experience. I had the opportunity to explore new technologies, exercise my creativity, and consider important factors like accessibility. Most importantly, I worked on a project centered around a subject that is near and dear to my heart—bike facilities in Portland.
+          Overall, this challenge was a rewarding experience. I had the opportunity to explore new technologies, exercise my creativity, and consider important factors like accessibility. Most importantly, I worked on a project centered around a subject that is near and dear to my heart.
         </p>
       </section>
     </div>
