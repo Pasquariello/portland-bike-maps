@@ -5,6 +5,11 @@ import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
 
+interface MyGeoJSON extends GeoJSON.GeoJsonObject {
+  type: 'FeatureCollection';
+  features: Array<GeoJSON.Feature>;
+}
+
 export default function LeafMapContainer() {
 
 const Map = useMemo(() => dynamic(
@@ -16,8 +21,8 @@ const Map = useMemo(() => dynamic(
 ), [])
 
 
-  const [geojsonData, setGeojsonData] = useState();
-  const [geojsonDataOrig, setGeojsonDataOrig] = useState();
+  const [geojsonData, setGeojsonData] = useState<any>();
+  const [geojsonDataOrig, setGeojsonDataOrig] = useState<MyGeoJSON | null>();
 
   const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 
@@ -69,21 +74,22 @@ const Map = useMemo(() => dynamic(
   
     setActiveClassFilter(newArray);
 
-    const options = {
-      ABL: 'CLASS_TWO', // Class 2
-      BBBL: 'CLASS_TWO', // Class 2
-      BL: 'CLASS_TWO', // Class 2
-      BBL: 'CLASS_TWO', // Class 2
-      ESR: 'CLASS_THREE', // Class 3
-      LSB: 'CLASS_THREE', // Class 3
-      NG: 'CLASS_ONE', // Class 1
-      PBL: 'CLASS_FOUR', // Class 4
-      SBBL: 'CLASS_TWO', // Class 2
-      SIR: 'CLASS_FOUR', // Class 4
-      TRL: 'CLASS_ONE', // Class 1
-  }
+      const options = {
+        ABL: 'CLASS_TWO', // Class 2
+        BBBL: 'CLASS_TWO', // Class 2
+        BL: 'CLASS_TWO', // Class 2
+        BBL: 'CLASS_TWO', // Class 2
+        ESR: 'CLASS_THREE', // Class 3
+        LSB: 'CLASS_THREE', // Class 3
+        NG: 'CLASS_ONE', // Class 1
+        PBL: 'CLASS_FOUR', // Class 4
+        SBBL: 'CLASS_TWO', // Class 2
+        SIR: 'CLASS_FOUR', // Class 4
+        TRL: 'CLASS_ONE', // Class 1
+    }
+ 
 
-    const filteredData = geojsonDataOrig?.features?.filter((data: { properties: { Facility: string; }; }) => newArray.includes(options[data.properties.Facility as keyof typeof options]));
+    const filteredData = geojsonDataOrig?.features?.filter(data => newArray.includes(options[data?.properties?.Facility as keyof typeof options]));
 
     if (!newArray.length) { 
       setGeojsonData(geojsonDataOrig)
@@ -128,7 +134,9 @@ const Map = useMemo(() => dynamic(
         <p 
           style={{color: '#3862ae', cursor: 'pointer'}}
           onClick={() => {
-            setGeojsonData(geojsonDataOrig)
+            if (geojsonDataOrig) {
+              setGeojsonData(geojsonDataOrig)
+            }
             setActiveClassFilter([]);
           }}
         >

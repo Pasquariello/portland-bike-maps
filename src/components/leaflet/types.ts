@@ -23,6 +23,6 @@ export interface MapProps  extends GeoJson{
 }
   
 export interface GeoJson {
-  geojsonData: FeatureCollection<Geometry, FacilityProperties>;
+  geojsonData: Object;
 }
 
