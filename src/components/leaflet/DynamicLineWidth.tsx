@@ -100,8 +100,8 @@ const DynamicLineWidth = ({geojsonData}: GeoJson) => {
   
     // Function to calculate line weight based on zoom level
     const getLineWeight = (zoom: number) => {
-      if (zoom >= 16) return 8;
-      if (zoom >= 15) return 4;
+      if (zoom >= 16) return 9;
+      if (zoom >= 15) return 8;
       if (zoom >= 13) return 3;
       if (zoom >= 10) return 2;
       if (zoom >= 8) return 1;
