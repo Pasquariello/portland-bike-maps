@@ -5,7 +5,7 @@ import { CLASS_FOUR, CLASS_ONE, CLASS_THREE, CLASS_TWO } from "@/constants";
 import { open_sans } from "@/ui/fonts";
 import { useState } from "react";
 
-const Filters = ({data, handleFilter}: any) => {
+const Filters = ({data, handleFilter}: {data: any, handleFilter: (data: any) => void }) => {
    
     const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 
