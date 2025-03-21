@@ -115,8 +115,8 @@ const Map = useMemo(() => dynamic(
   return (
     <div>
       <p className={`${open_sans.className}`} style={{fontSize: 16}}>Filter by type (select one or more):</p>
-      {/* <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-        <div style={{display: 'flex', gap: 20, marginBottom: 20}}>
+      <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+        <div style={{display: 'flex', gap: 20, marginBottom: 20, flexWrap: 'wrap'}}>
           {filters.map(filter => {
             return (
               <div 
@@ -143,7 +143,7 @@ const Map = useMemo(() => dynamic(
         >
           Reset
         </p>
-      </div> */}
+      </div>
       {geojsonData && (
 
         <Map geojsonData={geojsonData}>
