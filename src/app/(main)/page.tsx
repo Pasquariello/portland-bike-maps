@@ -1,6 +1,5 @@
 
 import LeafMapContainer from '@/components/leaflet/MapContainer';
-import { raleway, open_sans } from '@/ui/fonts';
 
 export default function Home() {
 
@@ -9,22 +8,25 @@ export default function Home() {
       
       <div style={{ backgroundImage: `url('/blob-scene-haikei.svg')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100%', paddingTop: 120, paddingBottom: 120, marginBottom: 120}}>
         {/* Content */}
-        <div style={{width: '770px', textAlign: 'center', 
-        margin: 'auto'
-        }}>
+        <div 
+          style={{
+            width: '770px', textAlign: 'center', 
+            margin: 'auto'
+          }}
+          >
 
         <h1 style={{ color: '#FFF', fontWeight: 300, marginBottom: 20, fontSize: 66}}>Portland</h1>
 
-        <h3 style={{ color: '#FFF', fontWeight: 400, fontSize: 22}}>Pedal Power: Cruisin’ Through Portland, One Bike Lane at a Time!</h3>
+        <h3 style={{ color: '#FFF', fontWeight: 400, fontSize: 22}}>Pedal Power: Cruisin' Through Portland, One Bike Lane at a Time!</h3>
 
         <p style={{color: '#Eae8e9'}}>
-          There’s no better way to experience Portland’s unique vibe than by cruising down its miles of bike lanes. From the bustling streets downtown to the peaceful paths along the river, every ride is an opportunity to soak in the city’s sights and sounds. Whether you’re a seasoned cyclist or just looking for a leisurely ride, Portland’s bike lanes make it easy to explore at your own pace.
+          There's no better way to experience Portland's unique vibe than by cruising down its miles of bike lanes. From the bustling streets downtown to the peaceful paths along the river, every ride is an opportunity to soak in the city's sights and sounds. Whether you're a seasoned cyclist or just looking for a leisurely ride, Portland's bike lanes make it easy to explore at your own pace.
         </p>
         </div>
       </div>
       <section style={{margin:'0 120px'}}>
 
-        <h2>Bike Facility Map</h2>
+      <h1 style={{fontSize: 44}}>Bike Facility Map</h1>
 
         <LeafMapContainer /> 
       </section>

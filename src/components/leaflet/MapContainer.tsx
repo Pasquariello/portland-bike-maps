@@ -16,8 +16,8 @@ const Map = useMemo(() => dynamic(
 ), [])
 
 
-  const [geojsonData, setGeojsonData] = useState<any>();
-  const [geojsonDataOrig, setGeojsonDataOrig] = useState<any>();
+  const [geojsonData, setGeojsonData] = useState();
+  const [geojsonDataOrig, setGeojsonDataOrig] = useState();
 
   const [activeClassFilter, setActiveClassFilter] = useState<string[]>([]);
 
@@ -36,7 +36,6 @@ const Map = useMemo(() => dynamic(
   const CLASS_TWO = '#FF9800';
   const CLASS_THREE = '#4A90E2';
   const CLASS_FOUR = '#D32F2F';
-  const FILTER_COLOR = '#3862a3'
 
   const filters = [
     {
@@ -107,7 +106,7 @@ const Map = useMemo(() => dynamic(
 
   return (
     <div>
-      <p className={`${open_sans.className}`} style={{fontSize: 16}}>Filter by type:</p>
+      <p className={`${open_sans.className}`} style={{fontSize: 16}}>Filter by type (select one or more):</p>
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <div style={{display: 'flex', gap: 20, marginBottom: 20}}>
           {filters.map(filter => {

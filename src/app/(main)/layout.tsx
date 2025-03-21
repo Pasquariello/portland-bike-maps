@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import 'maplibre-gl/dist/maplibre-gl.css';
 import NavItems from "@/components/nav/navItems";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,24 +15,21 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          display: 'flex',
-          justifyContent: 'flex-end',
-          paddingRight: 20,
-          paddingTop: 20,
-          paddingBottom: 20,
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        display: 'flex',
+        justifyContent: 'flex-end',
+        paddingRight: 20,
+        paddingTop: 20,
+        paddingBottom: 20,
+      }}>
+        <NavItems />
 
+      </div>
 
-        }}>
-         <NavItems />
-
-        </div>
-
-          {children}
-
+      {children}
     </>
   );
 }
