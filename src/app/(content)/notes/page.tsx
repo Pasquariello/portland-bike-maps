@@ -4,7 +4,7 @@ const NotesPage = () => {
   return (
     <div className="note-container">
       <header className="note-header">
-        <h1>Exploring Map Technologies: A Journey with MapLibre and Leaflet</h1>
+        <h1>Exploring Map Technologies</h1>
       </header>
 
       <section className="note-content">
