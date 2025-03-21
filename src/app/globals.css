@@ -48,24 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-railway);
 }
 
-/* h1 {
-  font-family: 'Raleway', sans-serif;
-  color: #333;
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
-h3 {
-  color: #007c7a;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  font-size: 16px;
-}
- */
 
 .nav-links a:hover { 
   text-decoration: underline;

@@ -87,6 +87,12 @@ const DynamicLineWidth = ({geojsonData}: GeoJson) => {
     const CLASS_TWO = '#FF9800';
     const CLASS_THREE = '#4A90E2';
     const CLASS_FOUR = '#D32F2F'
+
+    // const CLASS_ONE = '#003366';
+    // const CLASS_TWO = '#006400';
+    // const CLASS_THREE = '#4B0082';
+    // const CLASS_FOUR = '#333333'
+  
   
     const options = {
         ABL: CLASS_TWO, // Class 2
