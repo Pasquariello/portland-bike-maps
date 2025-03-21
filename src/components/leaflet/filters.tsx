@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 'use client'
 
 import { CLASS_FOUR, CLASS_ONE, CLASS_THREE, CLASS_TWO } from "@/constants";
@@ -56,27 +55,18 @@ const Filters = ({data, handleFilter}: any) => {
             TRL: 'CLASS_ONE',
         }
      
-    
         const filteredData = data?.features?.filter((data: { properties: { Facility: string; }; }) => newArray.includes(options[data?.properties?.Facility as keyof typeof options]));
     
         if (!newArray.length) { 
-        //   setGeojsonData(data)
-        //   return data;
-          handleFilter(data)
+          handleFilter(data);
         } 
         else {
-            
-        //   setGeojsonData({
-        //     ...geojsonData,
-        //     features: filteredData
-        //   });
             handleFilter({
                 ...data,
                 features: filteredData
-            })
+            });
         }
-    
-      }
+    }
 
     return (
         <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
@@ -100,7 +90,7 @@ const Filters = ({data, handleFilter}: any) => {
                 style={{color: '#3862ae', cursor: 'pointer'}}
                 onClick={() => {
                     if (data) {
-                    // setGeojsonData(data)
+                        handleFilter(data)
                     }
                     setActiveClassFilter([]);
                 }}
