@@ -4,7 +4,7 @@ import { open_sans } from "@/ui/fonts"
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import './nav.css';
+import styles from './nav.module.css';
 
 const navItems = [
     {
@@ -64,19 +64,22 @@ const NavItems = ({backgroundColor}: {backgroundColor: string}) => {
 
   
     return (
-      <nav style={{
-        background: backgroundColor
-      }}>
+      <nav 
+        className={styles.nav}
+        style={{
+          background: backgroundColor
+        }}
+      >
         {/* Hamburger icon for mobile */}
-        <div className="hamburger" onClick={toggleMenu}>
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </div>
   
         {/* Nav links */}
         <div
-          className={`${open_sans.className} nav-links ${isMenuOpen ? 'open' : 'close'}`}
+          className={`${open_sans.className} ${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}
         >
           {navItems.map((navItem) => (
             <Link

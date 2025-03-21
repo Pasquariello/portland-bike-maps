@@ -5,6 +5,7 @@ import { open_sans } from '@/ui/fonts';
 import dynamic from 'next/dynamic';
 import SlidingDrawer from '../slidingDrawer/slidingDrawer';
 import Filters from './filters';
+import styles from './map.module.css'; // Import the CSS for the drawer
 
 export default function LeafMapContainer() {
 
@@ -47,12 +48,12 @@ const Map = useMemo(() => dynamic(
 
   return (
     <div>
-      <p className={`${open_sans.className}`} style={{fontSize: 16}}>Filter by type (select one or more):</p>
+      <p className={`${open_sans.className} `} style={{fontSize: 16}}>Filter by type (select one or more):</p>
      <Filters data={geojsonData} handleFilter={handleFilter} />
       {filteredGeojsonData && (
 
         <Map geojsonData={filteredGeojsonData}>
-          <button className="open-drawer-btn" onClick={toggleDrawer}>
+          <button className={styles.openDrawerBtn} onClick={toggleDrawer}>
             Open Key
           </button>
         </Map>

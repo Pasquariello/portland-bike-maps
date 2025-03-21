@@ -1,16 +1,16 @@
 
 import LeafMapContainer from '@/components/leaflet/MapContainer';
 import Link from 'next/link';
-import './main.css';
+import styles from './main.module.css';
 
 export default function Home() {
 
   return (
     <>
       
-      <div className='home-hero'>
+      <div className={styles.homeHero}>
         {/* Content */}
-        <header className='hero-content'>
+        <header className={styles.heroContent}>
 
           <h1 style={{ color: '#FFF', fontWeight: 300, marginBottom: 20, fontSize: 66}}>Biking in Portland</h1>
 
@@ -21,7 +21,7 @@ export default function Home() {
           </p>
         </header>
       </div>
-      <section className="body-content">
+      <section className={styles.bodyContent}>
 
       <h1 style={{fontSize: 44}}>Bike Facility Map</h1>
 

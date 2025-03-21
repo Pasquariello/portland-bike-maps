@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import './slidingDrawer.css'; // Import the CSS for the drawer
+import styles from './slidingDrawer.module.css';
 
 interface FacilityInfo {
   facility: string;
@@ -30,10 +30,10 @@ const SlidingDrawer = ({open, toggleDrawer}: {open: boolean, toggleDrawer: () =>
   }, [open]);
 
   return (
-    <div className={`drawer ${isOpen ? 'open' : ''}`}>
-      <button className="close-content" onClick={toggleDrawer}>Close</button>
-      <div className="drawer-content">
-        <h2>Facility Key</h2>
+    <div className={`${styles.drawer} ${isOpen ? styles.open : ''}`}>
+      <button className={styles.closeContent} onClick={toggleDrawer}>Close</button>
+      <div className={styles.drawerContent}>
+        <h2 className={styles.drawerTitle}>Facility Key</h2>
         <table>
           <thead>
             <tr>

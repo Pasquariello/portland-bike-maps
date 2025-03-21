@@ -1,4 +1,4 @@
-.home-hero {
+.homeHero {
     background-image: url('/blob-scene-haikei.svg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,29 +8,24 @@
     margin-bottom: 120px;
 }
 
-.hero-content {
+.heroContent {
     max-width: 770px;
     text-align: center;
     margin: auto;
 }
 
-.body-content {
+.bodyContent {
     margin: 0 120px;
   }
   
-.leaflet-layer,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out,
-.leaflet-control-attribution {
-  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
-}
+
 
 @media screen and (max-width: 768px) {
     /* Styles for mobile landscape or tablet portrait */
-    .hero-content {
+    .heroContent {
         margin: 20px;
     }
-    .body-content {
+    .bodyContent {
         margin: 0 32px;
       }
   }

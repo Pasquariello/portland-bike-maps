@@ -1,12 +1,10 @@
 'use client'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-
 import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 import DynamicLineWidth from './DynamicLineWidth';
 import { MapProps } from './types';
-import './map.css'; // Import the CSS for the drawer
 
   
 const Map = ({ geojsonData, children }: MapProps) => {

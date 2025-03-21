@@ -1,5 +1,5 @@
 /* General nav styles */
-nav {
+.nav {
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
@@ -26,7 +26,7 @@ nav {
   }
   
   /* The navigation links */
-  .nav-links {
+  .navLinks {
     display: flex;
     gap: 80px;
     flex-direction: row;
@@ -35,7 +35,7 @@ nav {
   }
   
   /* Styling for the navigation links on hover */
-  .nav-links a:hover {
+  .navLinks a:hover {
     text-decoration: underline;
     cursor: pointer;
   }
@@ -52,7 +52,7 @@ nav {
     }
   
     /* Hide the nav links by default on mobile */
-    .nav-links {
+    .navLinks {
       width: 0;
       overflow: hidden;
       position: fixed;
@@ -74,7 +74,7 @@ nav {
       overflow-y: hidden;
     }
   
-    .nav-links.open {
+    .navLinks.open {
       width: 100%;
       transform: translateX(0); /* Slide the menu into view */
     }

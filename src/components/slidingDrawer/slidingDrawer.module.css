@@ -16,33 +16,18 @@
     bottom: 0;
   }
   
-  .drawer-content {
+  .drawerContent {
     padding: 1rem;
   }
   
-  h2 {
+  .drawerTitle {
     margin-top: 0;
     text-align: center;
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
 
 
-  .close-content {
+  .closeContent {
     position: absolute; 
     top: 20px;
     right: 20px;
@@ -51,7 +36,7 @@
     background: transparent
   }
   
-  .close-content:hover {
+  .closeContent:hover {
     background: #eae8e9;
   }
   
