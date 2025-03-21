@@ -28,13 +28,13 @@ const PopupContent = ({status, facilityType, segmentName, yearBuilt}: PopupConte
   return (
       <div>
           <h3>Name: {segmentName}</h3>
-          <div style={{display: 'flex', justifyContent: 'space-between'}}>
-            <p>Type: {facilityType}</p>
-            <p>Status: {status}</p>
-            {yearBuilt && <p>Year Built: {yearBuilt}</p>}
-          </div>
+          
+          <p><strong>Type:</strong> {facilityType}</p>
+          <p><strong>Status:</strong> {status}</p>
+          {yearBuilt && <p><strong>Year</strong> Built: {yearBuilt}</p>}
 
-          <p>Description: {fullDescripion[facilityType]}</p>
+          <p><strong>Description:</strong></p>
+          <p>{fullDescripion[facilityType]}</p>
 
 
       </div>

@@ -6,21 +6,21 @@ interface FacilityInfo {
   facility: string;
   value: string;
   description: string;
-  desiredMapClass: string;
+  facilityClass: string;
 }
 
 const facilityData: FacilityInfo[] = [
-  { facility: 'ABL', value: 'Advisory Bike Lane', description: 'Class 2', desiredMapClass: 'Bike Lane Class 2' },
-  { facility: 'BBBL', value: 'Bike Lane Buffered by Bus Lane', description: 'Class 2', desiredMapClass: 'Bike Lane Class 2' },
-  { facility: 'BL', value: 'Bike Lane', description: 'Class 2', desiredMapClass: 'Bike Lane Class 2' },
-  { facility: 'BBL', value: 'Buffered Bike Lane', description: 'Class 2', desiredMapClass: 'Bike Lane Class 2' },
-  { facility: 'ESR', value: 'Enhanced Shared Roadway', description: 'Class 3', desiredMapClass: 'Shared Roadway Class 3' },
-  { facility: 'LSB', value: 'Local Service Bikeway', description: 'Class 3', desiredMapClass: 'Bikeway Class 3' },
-  { facility: 'NG', value: 'Neighborhood Greenway', description: 'Class 1', desiredMapClass: 'Greenway Class 1' },
-  { facility: 'PBL', value: 'Protected Bike Lane', description: 'Class 4', desiredMapClass: 'Bike Lane Class 4' },
-  { facility: 'SBBL', value: 'Shared Bus-Bike Lane', description: 'Class 2', desiredMapClass: 'Bus-Bike Lane Class 2' },
-  { facility: 'SIR', value: 'Separated in-roadway', description: 'Class 4', desiredMapClass: 'In-roadway Class 4' },
-  { facility: 'TRL', value: 'Off-Street Path/Trail', description: 'Class 1', desiredMapClass: 'Path/Trail Class 1' },
+  { facility: 'ABL', value: 'Advisory Bike Lane', description: 'Class 2', facilityClass: 'Bike Lane Class 2' },
+  { facility: 'BBBL', value: 'Bike Lane Buffered by Bus Lane', description: 'Class 2', facilityClass: 'Bike Lane Class 2' },
+  { facility: 'BL', value: 'Bike Lane', description: 'Class 2', facilityClass: 'Bike Lane Class 2' },
+  { facility: 'BBL', value: 'Buffered Bike Lane', description: 'Class 2', facilityClass: 'Bike Lane Class 2' },
+  { facility: 'ESR', value: 'Enhanced Shared Roadway', description: 'Class 3', facilityClass: 'Shared Roadway Class 3' },
+  { facility: 'LSB', value: 'Local Service Bikeway', description: 'Class 3', facilityClass: 'Bikeway Class 3' },
+  { facility: 'NG', value: 'Neighborhood Greenway', description: 'Class 1', facilityClass: 'Greenway Class 1' },
+  { facility: 'PBL', value: 'Protected Bike Lane', description: 'Class 4', facilityClass: 'Bike Lane Class 4' },
+  { facility: 'SBBL', value: 'Shared Bus-Bike Lane', description: 'Class 2', facilityClass: 'Bus-Bike Lane Class 2' },
+  { facility: 'SIR', value: 'Separated in-roadway', description: 'Class 4', facilityClass: 'In-roadway Class 4' },
+  { facility: 'TRL', value: 'Off-Street Path/Trail', description: 'Class 1', facilityClass: 'Path/Trail Class 1' },
 ];
 
 const SlidingDrawer = ({open, toggleDrawer}: {open: boolean, toggleDrawer: () => void}) => {
@@ -29,10 +29,6 @@ const SlidingDrawer = ({open, toggleDrawer}: {open: boolean, toggleDrawer: () =>
   useEffect(() => {
     setIsOpen(open)
   }, [open]);
-
-//   const toggleDrawer = () => {
-//     setIsOpen((prev) => !prev);
-//   };
 
   return (
     <>
@@ -47,7 +43,7 @@ const SlidingDrawer = ({open, toggleDrawer}: {open: boolean, toggleDrawer: () =>
                 <th>Facility</th>
                 <th>Value</th>
                 <th>Description</th>
-                <th>Desired Map Class</th>
+                <th>Class</th>
               </tr>
             </thead>
             <tbody>
@@ -56,7 +52,7 @@ const SlidingDrawer = ({open, toggleDrawer}: {open: boolean, toggleDrawer: () =>
                   <td>{item.facility}</td>
                   <td>{item.value}</td>
                   <td>{item.description}</td>
-                  <td>{item.desiredMapClass}</td>
+                  <td>{item.facilityClass}</td>
                 </tr>
               ))}
             </tbody>
