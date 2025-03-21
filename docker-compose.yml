@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: alta-skills-assessment
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    depends_on:
+      - node
+    networks:
+      - alta_network
+
+  node:
+    image: node:18
+    container_name: node_container
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["npm", "install"]
+    networks:
+      - alta_network
+
+networks:
+  alta_network:
+    driver: bridge
