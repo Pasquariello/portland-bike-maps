@@ -11,6 +11,10 @@ const NavItems = () => {
 
     const navItems = [
         {
+            title: 'Home',
+            link: '/',
+        },
+        {
             title: 'Blog Page',
             link: '/blog',
         },
@@ -18,14 +22,11 @@ const NavItems = () => {
             title: 'PBOT Info',
             link: 'https://www.portland.gov/transportation',
         },
-        {
-            title: 'Home',
-            link: '/',
-        },
+       
     ];
 
     return (
-        <div className={`${open_sans.className} nav-links`} style={{ display: 'flex', gap: 200, }}>
+        <div className={`${open_sans.className} nav-links`} style={{ display: 'flex', gap: 80, }}>
             {navItems.map(navItem => {
                 return (
                     <Link 

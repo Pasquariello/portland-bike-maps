@@ -16,14 +16,15 @@ export default function RootLayout({
   return (
     <>
       <div style={{
-        position: 'absolute',
-        top: 0,
-        right: 0,
+        // position: 'absolute',
+        // top: 0,
+        // right: 0,
         display: 'flex',
         justifyContent: 'flex-end',
         paddingRight: 20,
         paddingTop: 20,
         paddingBottom: 20,
+        background: '#424963'
       }}>
         <NavItems />
 

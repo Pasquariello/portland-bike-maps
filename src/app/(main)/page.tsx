@@ -15,7 +15,7 @@ export default function Home() {
           }}
           >
 
-        <h1 style={{ color: '#FFF', fontWeight: 300, marginBottom: 20, fontSize: 66}}>Portland</h1>
+        <h1 style={{ color: '#FFF', fontWeight: 300, marginBottom: 20, fontSize: 66}}>Biking in Portland</h1>
 
         <h3 style={{ color: '#FFF', fontWeight: 400, fontSize: 22}}>Pedal Power: Cruisin' Through Portland, One Bike Lane at a Time!</h3>
 
